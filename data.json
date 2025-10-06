@@ -1,0 +1,210 @@
+{
+    "pareja": {
+        "novia": "Vanessa",
+        "novio": "Jairo ",
+        "iniciales": "V & J",
+        "nombreCompleto": "Vanessa y Jairo"
+    },
+    "padres": {
+        "novia": {
+            "padre": "Ramón Yaipén Loconi",
+            "madre": "Felipa Rodriguez Mendoza",
+            "titulo": "Padres de la Novia"
+        },
+        "novio": {
+            "padre": "Guillermo Hernandez Chavarria",
+            "madre": "Miriam Segura Vasquez",
+            "titulo": "Padres del Novio"
+        }
+    },
+    "padrinos": {
+        "aros": {
+            "padrino": "Wilder Chafloque",
+            "madrina": "Verónica Chafloque",
+            "titulo": "Padrinos de Aros"
+        }
+    },
+    "fecha": {
+        "fechaEvento": "November 15, 2025 13:00:00",
+        "fechaTexto": "15 de noviembre",
+        "año": "2025"
+    },
+    "versiculo": {
+        "texto": "El amor nunca se da por vencido, jamás pierde la fé, siempre tiene esperanzas y se mantiene ",
+        "referencia": "firme en toda circunstancia."
+    },
+    "ceremonias": [
+        {
+            "tipo": "civil",
+            "titulo": "Ceremonia Civil",
+            "hora": "02:00 pm",
+            "lugar": "Municipalidad de Los Olivos",
+            "direccion": "Avenida Carlos Izaguirre 813, Los Olivos",
+            "urlMapa": "https://www.google.com/maps/place/Municipalidad+de+Los+Olivos",
+            "icono": "ceremonia.svg"
+        },
+        {
+            "tipo": "religiosa",
+            "titulo": "Ceremonia Religiosa",
+            "hora": "07:00 pm",
+            "lugar": "Parroquia Santo Toribio de Mogrovejo",
+            "direccion": "Mz. G 1 Lote 19 Urb. El Alamo Callao",
+            "urlMapa": "https://www.google.com/maps/place/Parroquia+Santo+Toribio+de+Mogrovejo",
+            "icono": "iglesia.svg"
+        }
+    ],
+    "recepcion": {
+        "titulo": "¡Sigamos celebrando!",
+        "mensaje": "Después de la ceremonia los invitamos a la recepción.",
+        "nombre": "Recepción",
+        "lugar": "Asociación Santa Rosa",
+        "direccion": "San Joaquín 162, Los Olivos 15302",
+        "urlMapa": "https://www.google.com/maps/place/San+Joaquín+162,+Los+Olivos+15302",
+        "icono": "recepcion.svg"
+    },
+    "itinerario": [
+        {
+            "evento": "Ceremonia Civil",
+            "hora": "2:00 pm",
+            "lugar": "Municipalidad de Los Olivos",
+            "icono": "ceremonia.svg"
+        },
+        {
+            "evento": "Ceremonia Religiosa",
+            "hora": "7:00 pm",
+            "lugar": "Parroquia Santo Toribio",
+            "icono": "iglesia.svg"
+        },
+        {
+            "evento": "Recepción",
+            "hora": "9:00 pm",
+            "lugar": "Asociación Santa Rosa",
+            "icono": "recepcion.svg"
+        },
+        {
+            "evento": "Fiesta",
+            "hora": "10:00 pm",
+            "lugar": "Asociación Santa Rosa",
+            "icono": "fiesta.svg"
+        }
+    ],
+    "vestimenta": {
+        "tipo": "Etiqueta",
+        "damas": "Vestido largo no blanco",
+        "caballeros": "Traje Formal"
+    },
+    "asistencia": {
+        "urlFormulario": "https://forms.gle/A4tdPC3aa6ufpJ2Y8",
+        "sinNinos": {
+            "titulo": "SIN NIÑOS",
+            "mensaje": "Este evento es solo para adultos. Agradecemos tu comprensión."
+        }
+    },
+    "regalos": {
+        "titulo": "Sugerencia de regalos",
+        "mensaje": "¡Tu presencia es nuestro mejor regalo! Pero si deseas obsequiarnos algo puedes hacerlo de la siguiente forma:",
+        "metodosPago": {
+            "transferencia": {
+                "titulo": "TRANSFERENCIA BANCARIA",
+                "bancos": [
+                    {
+                        "nombre": "Banco BCP",
+                        "cuenta": "1919514205887",
+                        "titular": "Jairo A. Hernandez Segura"
+                    },
+                    {
+                        "nombre": "Banco Interbank",
+                        "cuenta": "144 3307447776",
+                        "titular": "Yanery T. Hernandez Segura"
+                    }
+                ]
+            },
+            "billeteras": {
+                "titulo": "BILLETERAS DIGITALES",
+                "opciones": [
+                    {
+                        "tipo": "Yape",
+                        "numero": "906 929 257",
+                        "titular": "Vanessa D. Yaipen Rodriguez"
+                    },
+                    {
+                        "tipo": "Plin",
+                        "numero": "933 105 520",
+                        "titular": "Yanery T. Hernandez Segura"
+                    }
+                ]
+            }
+        },
+        "confirmacion": {
+            "titulo": "Confirmar Asistencia",
+            "mensaje": "Tu presencia es importante para nosotros.",
+            "accion": "Confirma Aqui!",
+            "despedida": "Te esperamos!"
+        }
+    },
+    "medios": {
+        "audio": "assets/audio/audio.mp3",
+        "imagenes": {
+            "portada": "assets/images/carta.png",
+            "separador1": "assets/images/2.png",
+            "separador2": "assets/images/3.png",
+            "separador3": "assets/images/5.png",
+            "fondo1": "assets/images/1.png"
+        }
+    },
+    "metadatos": {
+        "titulo": "Invitación Boda",
+        "descripcion": "¡Tenemos el honor de invitarte a nuestra boda!",
+        "ogImage": "https://eltigrecreativocom.github.io/boda/imagen-boda.jpg",
+        "ogUrl": "https://eltigrecreativocom.github.io/boda/"
+    },
+    "textos": {
+        "invitacion": {
+            "tituloPrincipal": "¡Nos Casamos!",
+            "nosCasamos": "Nos casamos",
+            "clickParaAbrir": "Click para abrir la invitación",
+            "bendicion": "Con nuestro amor, la bendición de Dios<br> y la de nuestros Padres:",
+            "nosotros": "Nosotros",
+            "invitacionMensaje": "Tenemos el honor de invitarte a <br> celebrar nuestra unión en matrimonio.",
+            "presionaCorazon": "Presiona el ♡ para Nuestra canción",
+            "soloFaltan": "¡Solo faltan!",
+            "eventoComenzo": "¡El evento ya comenzó!"
+        },
+        "contador": {
+            "dias": "Días",
+            "horas": "Horas",
+            "minutos": "Minutos",
+            "segundos": "Segundos"
+        },
+        "vestimenta": {
+            "titulo": "CÓDIGO DE VESTIMENTA"
+        },
+        "ceremonia": {
+            "verUbicacion": "Ver ubicación"
+        },
+        "recepcion": {
+            "verUbicacion": "Ver ubicación"
+        },
+        "itinerario": {
+            "titulo": "Itinerario del Evento"
+        },
+        "asistencia": {
+            "confirmacionTitulo": "CONFIRMACIÓN DE ASISTENCIA",
+            "botonConfirmar": "Confirmar asistencia",
+            "sinNinosTitulo": "SIN NIÑOS",
+            "sinNinosMensaje": "Este evento es solo para adultos. Agradecemos tu comprensión."
+        },
+        "regalos": {
+            "titulo": "Sugerencia de regalos",
+            "mensaje": "Tu presencia es el mejor regalo que podemos recibir. Sin embargo, si deseas obsequiarnos algo especial, hemos creado una lista de regalos en:",
+            "botonVerMas": "Ver más",
+            "codigoNovios": "Código de novios",
+            "cuentaBanco": "Mi cuenta",
+            "botonConfirmar": "Confirmar regalo"
+        },
+        "agradecimiento": {
+            "esperamos": "Esperamos contar con tu presencia en este día tan especial para nosotros.<br> Con cariño,",
+            "gracias": "Muchas gracias!"
+        }
+    }
+}

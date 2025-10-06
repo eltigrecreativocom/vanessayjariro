@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Invitación Boda</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Invitación Boda">
+    <meta property="og:description" content="¡Tenemos el honor de invitarte a nuestra boda!">
+    <meta property="og:image" content="https://eltigrecreativocom.github.io/boda/imagen-boda.jpg">
+    <meta property="og:url" content="https://eltigrecreativocom.github.io/boda/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card (opcional) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invitación Boda">
+    <meta name="twitter:description" content="¡Acompáñanos en este día especial!">
+    <meta name="twitter:image" content="https://eltigrecreativocom.github.io/boda/imagen-boda.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/dinamico.js" defer></script>
+    <style>
+        /* ====== CALENDARIO ====== */
+        .mini-calendario {
+            --bg: #f7f4f1;
+            --dark: #3d2f26;
+            --month: #9b6a36;
+            --accent: #d9ab2b;
+
+            font-family: "Montserrat", sans-serif;
+            display: inline-block;
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        .mini-calendario__mes {
+            text-transform: uppercase;
+            color: var(--month);
+            font-weight: 700;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .mini-calendario__fila {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .mini-calendario__lado {
+            width: 140px;
+            height: 62px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mini-calendario__lado::before,
+        .mini-calendario__lado::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--dark);
+        }
+
+        .mini-calendario__lado::before {
+            top: 10px;
+        }
+
+        .mini-calendario__lado::after {
+            bottom: 10px;
+        }
+
+        .mini-calendario__texto {
+            position: relative;
+            z-index: 2;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+
+        .mini-calendario__numero {
+            font-size: 56px;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        @media (max-width: 360px) {
+            .mini-calendario__fila {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .mini-calendario__lado {
+                width: 100%;
+                height: 48px;
+            }
+
+            .mini-calendario__lado::before,
+            .mini-calendario__lado::after {
+                width: 120px;
+            }
+
+            .mini-calendario__numero {
+                font-size: 44px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Elementos decorativos -->
+        <section class="fondo1 section1">
+            <p data-texto="titulo-principal"></p>
+            <h1 class="titulo" data-nombre="titulo-pareja"></h1>
+            <p class="fecha" data-fecha="evento"></p>
+            <img src="assets/images/carta.png" alt="" style="width: 150px; margin-top: 10px;margin:auto"
+                data-imagen="portada">
+            <p data-texto="click-abrir"></p>
+
+
+
+        </section>
+        <!-- Contenido principal -->
+
+        <section class="section1 bg4" style="    min-height: 450px;
+    margin-top: -150px;
+    background-size: cover;
+    padding-top: 70px;
+    background-position: bottom;">
+            <h4 style="max-width: 300px;margin-top:80px;
+    text-align: center;" data-versiculo="texto">
+            </h4>
+            <h1 class="titulo" data-nombre="iniciales"></h1>
+            <p data-texto="nos-casamos"></p>
+
+        </section>
+        <img src="assets/images/2.png" alt="" style="width: 100%;
+    margin-top: -15px;
+    margin-bottom: -131px;
+  
+    position: relative;">
+
+        <!-- Contenido segundo -->
+        <section class="section1 bg1" style="padding-top: 250px;
+    padding-bottom: 200px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;">
+
+            <p data-texto="bendicion"></p>
+
+            <!-- Sección de Padres -->
+            <div class="padres-section" style="margin: 30px 0;">
+                <div class="padres-novia" style="margin-bottom: 20px;">
+                    <h4 data-padres="titulo-novia"
+                        style="font-family: 'Great Vibes'; font-size: 18px; margin-bottom: 10px;"></h4>
+                    <p data-padres="padre-novia" style="margin: 5px 0;"></p>
+                    <p data-padres="madre-novia" style="margin: 5px 0;"></p>
+                </div>
+
+                <div class="padres-novio">
+                    <h4 data-padres="titulo-novio"
+                        style="font-family: 'Great Vibes'; font-size: 18px; margin-bottom: 10px;"></h4>
+                    <p data-padres="padre-novio" style="margin: 5px 0;"></p>
+                    <p data-padres="madre-novio" style="margin: 5px 0;"></p>
+                </div>
+
+                <!-- Sección de Padrinos -->
+                <div class="padrinos-aros" style="margin-top: 25px;">
+                    <h4 data-padrinos="titulo-aros"
+                        style="font-family: 'Great Vibes'; font-size: 18px; margin-bottom: 10px;"></h4>
+                    <p data-padrinos="padrino-aros" style="margin: 5px 0;"></p>
+                    <p data-padrinos="madrina-aros" style="margin: 5px 0;"></p>
+                </div>
+            </div>
+
+            <p data-texto="nosotros"></p>
+            <h1 class="titulo" data-nombre="titulo-pareja"></h1>
+
+            <p data-texto="invitacion-mensaje"></p>
+
+            <div class="audio-player" id="audioPlayerContainer">
+                <p data-texto="presiona-corazon"></p>
+
+                <button class="play-btn" id="playBtn">
+                    <i class="fas fa-heart"></i>
+                </button>
+
+            </div>
+            <div class="mini-calendario">
+                <div class="mini-calendario__mes" data-calendario="mes"></div>
+
+                <div class="mini-calendario__fila">
+                    <div class="mini-calendario__lado">
+                        <span class="mini-calendario__texto" data-calendario="dia-semana"></span>
+                    </div>
+
+                    <div class="mini-calendario__numero" data-calendario="dia"></div>
+
+                    <div class="mini-calendario__lado">
+                        <span class="mini-calendario__texto" data-calendario="año"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contador">
+                <h4 id="contador-texto" style="text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Great Vibes';" data-texto="solo-faltan"></h4>
+                <div class="tiempo">
+                    <div class="unidad">
+                        <div class="numero" id="dias">00</div>
+                        <div class="etiqueta" data-texto="dias"></div>
+                    </div>
+                    <div class="unidad">
+                        <div class="numero" id="horas">00</div>
+                        <div class="etiqueta" data-texto="horas"></div>
+                    </div>
+                    <div class="unidad">
+                        <div class="numero" id="minutos">00</div>
+                        <div class="etiqueta" data-texto="minutos"></div>
+                    </div>
+                    <div class="unidad">
+                        <div class="numero" id="segundos">00</div>
+                        <div class="etiqueta" data-texto="segundos"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <img src="assets/images/3.png" alt="" style="width: 100%;margin-top: -140px;">
+
+        <section class="section1 lugares bg0" style="margin-top: -100px;">
+            <!-- Ceremonia Civil -->
+            <article data-ceremonia="0">
+                <img src="assets/icons/ceremonia.svg" alt="" data-ceremonia-icono="0">
+                <h4 data-ceremonia-titulo="0"></h4>
+                <h5 data-ceremonia-hora="0" style="margin: 10px 0; font-weight: bold;"></h5>
+                <p data-ceremonia-lugar="0" style="font-weight: bold; margin: 5px 0;"></p>
+                <p data-ceremonia-direccion="0" style="margin: 5px 0;"></p>
+                <a href="#" class="boton1" data-ceremonia-mapa="0" data-texto="ver-ubicacion"></a>
+            </article>
+
+            <!-- Ceremonia Religiosa -->
+            <article data-ceremonia="1">
+                <img src="assets/icons/iglesia.svg" alt="" data-ceremonia-icono="1">
+                <h4 data-ceremonia-titulo="1"></h4>
+                <h5 data-ceremonia-hora="1" style="margin: 10px 0; font-weight: bold;"></h5>
+                <p data-ceremonia-lugar="1" style="font-weight: bold; margin: 5px 0;"></p>
+                <p data-ceremonia-direccion="1" style="margin: 5px 0;"></p>
+                <a href="#" class="boton1" data-ceremonia-mapa="1" data-texto="ver-ubicacion"></a>
+            </article>
+        </section>
+
+        <!-- Sección de Recepción -->
+        <section class="section1 lugares bg0" style="margin-top: -100px;">
+            <article style="max-width: 400px; margin: 0 auto;">
+                <h2 data-recepcion="titulo"
+                    style="font-family: 'Great Vibes'; font-size: 32px; margin-bottom: 15px; color: #466aa1;"></h2>
+
+                <p data-recepcion="mensaje" style="margin-bottom: 25px; color: #333; font-size: 16px;"></p>
+
+                <img src="assets/icons/recepcion.svg" alt="" style="width: 70px; margin: 15px auto;">
+                <h4 data-recepcion="nombre"
+                    style="font-family: 'Great Vibes'; font-size: 24px; margin-bottom: 10px; color: #7390bd;"></h4>
+                <h5 data-recepcion="lugar" style="font-weight: bold; margin-bottom: 8px; color: #466aa1;"></h5>
+                <p data-recepcion="direccion" style="margin-bottom: 20px; color: #666;"></p>
+                <a href="#" class="boton1" data-recepcion="mapa" data-texto="ver-ubicacion"></a>
+            </article>
+        </section>
+
+        <section id="itinerario-section " class="visible fondo1"
+            style="min-height: 400px; padding-bottom: 40px;padding-top: 80px;">
+
+            <h4 style="text-align: center" data-texto="itinerario-titulo"></h4>
+            <br>
+            <div class="timeline-container">
+                <div class="timeline-bar">
+                    <div class="timeline-fill" id="timelineFill" style="height: 20%;"></div>
+                </div>
+                <div class="timeline">
+                    <div class="evento visible" data-evento="0">
+                        <img src="assets/icons/ceremonia.svg" alt="" style="width: 40px;" data-itinerario-icono="0">
+                        <div class="info">
+                            <h5 data-itinerario="evento-0" style="margin-bottom: 5px; color: #466aa1;"></h5>
+                            <p data-itinerario="hora-0" style="font-weight: bold; margin-bottom: 3px; color: #7390bd;">
+                            </p>
+                            <p data-itinerario="lugar-0" style="font-size: 12px; color: #666;"></p>
+                        </div>
+                    </div>
+
+                    <div class="evento visible" data-evento="1">
+                        <img src="assets/icons/iglesia.svg" alt="" style="width: 40px;" data-itinerario-icono="1">
+                        <div class="info">
+                            <h5 data-itinerario="evento-1" style="margin-bottom: 5px; color: #466aa1;"></h5>
+                            <p data-itinerario="hora-1" style="font-weight: bold; margin-bottom: 3px; color: #7390bd;">
+                            </p>
+                            <p data-itinerario="lugar-1" style="font-size: 12px; color: #666;"></p>
+                        </div>
+                    </div>
+                    <div class="evento visible" data-evento="2">
+                        <img src="assets/icons/recepcion.svg" alt="" style="width: 40px;" data-itinerario-icono="2">
+                        <div class="info">
+                            <h5 data-itinerario="evento-2" style="margin-bottom: 5px; color: #466aa1;"></h5>
+                            <p data-itinerario="hora-2" style="font-weight: bold; margin-bottom: 3px; color: #7390bd;">
+                            </p>
+                            <p data-itinerario="lugar-2" style="font-size: 12px; color: #666;"></p>
+                        </div>
+                    </div>
+                    <div class="evento" data-evento="3">
+                        <img src="assets/icons/fiesta.svg" alt="" style="width: 40px;" data-itinerario-icono="3">
+                        <div class="info">
+                            <h5 data-itinerario="evento-3" style="margin-bottom: 5px; color: #466aa1;"></h5>
+                            <p data-itinerario="hora-3" style="font-weight: bold; margin-bottom: 3px; color: #7390bd;">
+                            </p>
+                            <p data-itinerario="lugar-3" style="font-size: 12px; color: #666;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <img src="assets/images/5.png" alt="" style="width: 100%;margin-top: -90px;">
+        <section class="section1 bg1" style="    margin-top: -100px;
+    position: relative;">
+            <h3 data-texto="vestimenta-titulo"></h3>
+            <article class="vestimenta">
+                <p data-vestimenta="tipo"></p>
+                <img src="assets/icons/vestimenta.svg" alt="" style="    width: 86px;">
+                <p data-vestimenta="damas"></p>
+                <p data-vestimenta="caballeros"></p>
+            </article>
+        </section>
+
+        <section class="section1 asistencia "
+            style="padding-bottom: 80px; padding-top: 80px;background-image: url('assets/images/1.png');background-size: contain;">
+            <article>
+                <h3 data-texto="confirmacion-titulo"></h3>
+                <!--p>Te agradeceremos confirmar tu asistencia antes del 8 de Septiembre de 2025</p-->
+                <div style="text-align: center; margin-top: 20px;">
+                    <!-- Enlace simple -->
+                    <a class="boton1" href="https://forms.gle/A4tdPC3aa6ufpJ2Y8" target="_blank" rel="noopener"
+                        data-asistencia="enlace" data-texto="boton-confirmar"></a>
+
+                    <!-- Botón estilizado -->
+
+
+
+                </div>
+            </article>
+
+            <article>
+                <h3 data-texto="sin-ninos-titulo"></h3>
+                <p data-texto="sin-ninos-mensaje"></p>
+            </article>
+
+            <article class="seccion-centrada">
+                <h3 data-regalo="titulo"></h3>
+                <p data-regalo="mensaje"></p>
+
+                <!-- Transferencias Bancarias -->
+                <div data-regalo="transferencias" class="metodos-pago"></div>
+
+                <!-- Billeteras Digitales -->
+                <div data-regalo="billeteras" class="metodos-pago"></div>
+
+                <br><br>
+
+                <!-- Confirmación de Asistencia -->
+                <div class="confirmacion-asistencia">
+                    <h4 data-confirmacion="titulo"></h4>
+                    <p data-confirmacion="mensaje"></p>
+                    <a href="#" class="boton1" data-confirmacion="accion"></a>
+                    <p data-confirmacion="despedida"></p>
+                </div>
+            </article>
+
+            <article>
+                <p data-texto="esperamos"></p>
+                <h1 style="
+    font-family: 'Great Vibes';
+    margin-top: 20px;
+" data-nombre="nombres-firma"></h1>
+                <h4 style="
+    font-family: 'Great Vibes';
+    margin-top: 20px;
+    font-size: 19px;
+" data-texto="gracias"></h4>
+            </article>
+        </section>
+        <img src="assets/images/6.png" alt="">
+
+
+
+
+    </div>
+
+    <audio id="audioPlayer" loop>
+        <source src="assets/audio/audio.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+</body>
+
+</html>
