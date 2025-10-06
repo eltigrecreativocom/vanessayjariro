@@ -142,6 +142,20 @@ class BodaDinamica {
         this.actualizarTexto('[data-padrinos="titulo-aros"]', padrinos.aros.titulo);
         this.actualizarTexto('[data-padrinos="padrino-aros"]', padrinos.aros.padrino);
         this.actualizarTexto('[data-padrinos="madrina-aros"]', padrinos.aros.madrina);
+
+        // Actualizar padrinos de religioso
+        if (padrinos.religioso && padrinos.religioso.length > 0) {
+            // Primer par de padrinos de religioso
+            this.actualizarTexto('[data-padrinos="titulo-religioso"]', padrinos.religioso[0].titulo);
+            this.actualizarTexto('[data-padrinos="padrino-religioso-1"]', padrinos.religioso[0].padrino);
+            this.actualizarTexto('[data-padrinos="madrina-religioso-1"]', padrinos.religioso[0].madrina);
+
+            // Segundo par de padrinos de religioso (si existe)
+            if (padrinos.religioso[1]) {
+                this.actualizarTexto('[data-padrinos="padrino-religioso-2"]', padrinos.religioso[1].padrino);
+                this.actualizarTexto('[data-padrinos="madrina-religioso-2"]', padrinos.religioso[1].madrina);
+            }
+        }
     }
 
     actualizarFechas() {

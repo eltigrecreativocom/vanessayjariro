@@ -22,7 +22,14 @@
             "padrino": "Wilder Chafloque",
             "madrina": "Verónica Chafloque",
             "titulo": "Padrinos de Aros"
-        }
+        },
+        "religioso": [
+            {
+                "padrino": "Walter Remon Farroñay",
+                "madrina": "Rosa Rodriguez Mendoza",
+                "titulo": "Padrinos de Religioso"
+            }
+        ]
     },
     "fecha": {
         "fechaEvento": "November 15, 2025 13:00:00",
@@ -40,7 +47,7 @@
             "hora": "02:00 pm",
             "lugar": "Municipalidad de Los Olivos",
             "direccion": "Avenida Carlos Izaguirre 813, Los Olivos",
-            "urlMapa": "https://www.google.com/maps/place/Municipalidad+de+Los+Olivos",
+            "urlMapa": "https://maps.app.goo.gl/iHFQWfihBWUUXAdD6?g_st=aw",
             "icono": "ceremonia.svg"
         },
         {
@@ -49,7 +56,7 @@
             "hora": "07:00 pm",
             "lugar": "Parroquia Santo Toribio de Mogrovejo",
             "direccion": "Mz. G 1 Lote 19 Urb. El Alamo Callao",
-            "urlMapa": "https://www.google.com/maps/place/Parroquia+Santo+Toribio+de+Mogrovejo",
+            "urlMapa": "https://maps.app.goo.gl/LmSsjhBdn9xYfpzB9?g_st=aw",
             "icono": "iglesia.svg"
         }
     ],
@@ -57,9 +64,9 @@
         "titulo": "¡Sigamos celebrando!",
         "mensaje": "Después de la ceremonia los invitamos a la recepción.",
         "nombre": "Recepción",
-        "lugar": "Asociación Santa Rosa",
-        "direccion": "San Joaquín 162, Los Olivos 15302",
-        "urlMapa": "https://www.google.com/maps/place/San+Joaquín+162,+Los+Olivos+15302",
+        "lugar": "Los olivos",
+        "direccion": "Av. Naranjal 1746, Los Olivos 15306, Ref ovalo Canta Callao",
+        "urlMapa": "https://maps.app.goo.gl/EjjfEL1VoDmw9aDN7?g_st=aw",
         "icono": "recepcion.svg"
     },
     "itinerario": [
@@ -94,7 +101,7 @@
         "caballeros": "Traje Formal"
     },
     "asistencia": {
-        "urlFormulario": "https://forms.gle/A4tdPC3aa6ufpJ2Y8",
+        "urlFormulario": "https://wa.me/51906929257?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20",
         "sinNinos": {
             "titulo": "SIN NIÑOS",
             "mensaje": "Este evento es solo para adultos. Agradecemos tu comprensión."
