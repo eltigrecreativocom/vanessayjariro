@@ -459,12 +459,17 @@ class BodaDinamica {
     actualizarImagenes() {
         const { medios } = this.datos;
 
-        // Audio
-        const audioPlayer = document.getElementById('audioPlayer');
-        if (audioPlayer) {
-            const source = audioPlayer.querySelector('source');
-            if (source) {
-                source.src = medios.audio;
+        // Audio - no necesitamos configurar nada aquí para YouTube
+        // El inicializarReproductor() se encarga de todo
+
+        // Para compatibilidad con audio tradicional
+        if (typeof medios.audio === 'string') {
+            const audioPlayer = document.getElementById('audioPlayer');
+            if (audioPlayer) {
+                const source = audioPlayer.querySelector('source');
+                if (source) {
+                    source.src = medios.audio;
+                }
             }
         }
 
@@ -530,6 +535,81 @@ class BodaDinamica {
     }
 
     inicializarReproductor() {
+        const { medios } = this.datos;
+
+        // Verificar si tenemos audio de YouTube
+        if (medios.audio && medios.audio.tipo === 'youtube') {
+            this.inicializarYouTubePlayer(medios.audio.videoId);
+        } else {
+            // Fallback para audio tradicional
+            this.inicializarAudioTradicional();
+        }
+    }
+
+    inicializarYouTubePlayer(videoId) {
+        const playBtn = document.getElementById('playBtn');
+        const audioPlayerContainer = document.getElementById('audioPlayerContainer');
+        const youtubeContainer = document.getElementById('youtubePlayerContainer');
+
+        if (!playBtn || !audioPlayerContainer) return;
+
+        let player = null;
+        let isPlaying = false;
+
+        // Mostrar el container después de 3 segundos
+        setTimeout(() => {
+            audioPlayerContainer.classList.add('visible');
+        }, 3000);
+
+        // Función para inicializar el player de YouTube
+        window.onYouTubeIframeAPIReady = () => {
+            player = new YT.Player('youtubePlayer', {
+                height: '0',
+                width: '0',
+                videoId: videoId,
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'disablekb': 1,
+                    'modestbranding': 1,
+                    'rel': 0,
+                    'showinfo': 0
+                },
+                events: {
+                    'onReady': () => {
+                        console.log('YouTube player ready');
+                    },
+                    'onStateChange': (event) => {
+                        if (event.data === YT.PlayerState.ENDED) {
+                            // Reiniciar cuando termine
+                            player.seekTo(0);
+                            player.playVideo();
+                        }
+                    }
+                }
+            });
+        };
+
+        // Si la API ya está cargada
+        if (window.YT && window.YT.Player) {
+            window.onYouTubeIframeAPIReady();
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (!player) return;
+
+            if (isPlaying) {
+                player.pauseVideo();
+                playBtn.innerHTML = '<i class="fas fa-heart"></i>';
+            } else {
+                player.playVideo();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+    }
+
+    inicializarAudioTradicional() {
         const audioPlayer = document.getElementById('audioPlayer');
         const playBtn = document.getElementById('playBtn');
         const audioPlayerContainer = document.getElementById('audioPlayerContainer');
