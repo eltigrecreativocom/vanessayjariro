@@ -27,11 +27,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scrollspy.css">
 
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script src="assets/js/dinamico.js" defer></script>
+    <script src="assets/js/scrollspy.js" defer></script>
     <style>
         /* ====== CALENDARIO ====== */
         .mini-calendario {
@@ -137,7 +139,7 @@
     <div class="container">
 
         <!-- Elementos decorativos -->
-        <section class="fondo1 section1">
+        <section class="fondo1 section1" data-scrollspy="animation: fade; delay: 200">
             <p data-texto="titulo-principal"></p>
             <h1 class="titulo" data-nombre="titulo-pareja"></h1>
             <p class="fecha" data-fecha="evento"></p>
@@ -154,7 +156,7 @@
     margin-top: -150px;
     background-size: cover;
     padding-top: 70px;
-    background-position: bottom;">
+    background-position: bottom;" data-scrollspy="animation: slide-bottom; delay: 300">
             <h4 style="max-width: 300px;margin-top:80px;
     text-align: center;" data-versiculo="texto">
             </h4>
@@ -173,7 +175,7 @@
     padding-bottom: 200px;
     position: relative;
     background-size: contain;
-    background-repeat: no-repeat;">
+    background-repeat: no-repeat;" data-scrollspy="animation: fade; delay: 400">
 
             <p data-texto="bendicion"></p>
 
@@ -219,7 +221,8 @@
 
             <p data-texto="invitacion-mensaje"></p>
 
-            <div class="audio-player" id="audioPlayerContainer">
+            <div class="audio-player" id="audioPlayerContainer"
+                data-scrollspy="animation: scale-up; delay: 400; target: > p, > button">
                 <p data-texto="presiona-corazon"></p>
 
                 <button class="play-btn" id="playBtn">
@@ -232,7 +235,7 @@
                 </div>
 
             </div>
-            <div class="mini-calendario">
+            <div class="mini-calendario" data-scrollspy="animation: slide-bottom; delay: 500">
                 <div class="mini-calendario__mes" data-calendario="mes"></div>
 
                 <div class="mini-calendario__fila">
@@ -248,9 +251,7 @@
                 </div>
             </div>
 
-
-
-            <div class="contador">
+            <div class="contador" data-scrollspy="animation: fade; delay: 600">
                 <h4 id="contador-texto" style="text-align: center;
     margin-bottom: 10px;
     font-family: 'Great Vibes';" data-texto="solo-faltan"></h4>
@@ -277,7 +278,8 @@
 
         <img src="assets/images/3.png" alt="" style="width: 100%;margin-top: -140px;">
 
-        <section class="section1 lugares bg0" style="margin-top: -100px;">
+        <section class="section1 lugares bg0" style="margin-top: -100px;"
+            data-scrollspy="animation: slide-bottom; delay: 400; target: > article">
             <!-- Ceremonia Civil -->
             <article data-ceremonia="0">
                 <img src="assets/icons/ceremonia.svg" alt="" data-ceremonia-icono="0">
@@ -300,7 +302,8 @@
         </section>
 
         <!-- Sección de Recepción -->
-        <section class="section1 lugares bg0" style="margin-top: -100px;">
+        <section class="section1 lugares bg0" style="margin-top: -100px;"
+            data-scrollspy="animation: fade; delay: 500; target: > article">
             <article style="max-width: 400px; margin: 0 auto;">
                 <h2 data-recepcion="titulo"
                     style="font-family: 'Great Vibes'; font-size: 32px; margin-bottom: 15px; color: #466aa1;"></h2>
@@ -317,7 +320,8 @@
         </section>
 
         <section id="itinerario-section " class="visible fondo1"
-            style="min-height: 400px; padding-bottom: 40px;padding-top: 80px;">
+            style="min-height: 400px; padding-bottom: 40px;padding-top: 80px;"
+            data-scrollspy="animation: slide-left; delay: 300; target: > h4">
 
             <h4 style="text-align: center" data-texto="itinerario-titulo"></h4>
             <br>
@@ -379,9 +383,10 @@
         </section-->
 
         <section class="section1 asistencia "
-            style="padding-bottom: 80px; padding-top: 80px;background-image: url('assets/images/1.png');background-size: contain;">
-            <h3 data-texto="vestimenta-titulo"></h3>
-            <article class="vestimenta">
+            style="padding-bottom: 80px; padding-top: 80px;background-image: url('assets/images/1.png');background-size: contain;"
+            data-scrollspy="animation: fade; delay: 400; target: > article">
+            <article>
+                <h3 data-texto="vestimenta-titulo"></h3>
                 <p data-vestimenta="tipo"></p>
                 <img src="assets/icons/vestimenta.svg" alt="" style="    width: 86px;">
                 <p data-vestimenta="damas"></p>
