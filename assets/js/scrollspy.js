@@ -23,12 +23,6 @@ class ScrollSpy {
 
     setupElement(element) {
         const config = this.parseConfig(element.dataset.scrollspy);
-        
-        // Configurar targets si están especificados
-        let targets = [element];
-        if (config.target) {
-            targets = this.getTargets(element, config.target);
-        }
 
         // Crear observer para este elemento
         const observer = new IntersectionObserver((entries) => {
@@ -43,71 +37,29 @@ class ScrollSpy {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        // Observar el elemento principal
+        // Observar el elemento
         observer.observe(element);
-        
-        // Si hay targets específicos, observar cada uno
-        if (config.target) {
-            targets.forEach(target => {
-                if (target !== element) {
-                    observer.observe(target);
-                }
-            });
-        }
-
         this.observers.set(element, observer);
-    }    parseConfig(configString) {
+    } parseConfig(configString) {
         const config = {
             animation: 'fade',
             delay: 0,
-            target: null,
             speed: 'normal'
         };
 
         if (!configString) return config;
 
-        // Parsear configuración tipo: "animation: fade; delay: 400; target: > h3, > p"
+        // Parsear configuración tipo: "animation: fade; delay: 400"
         const pairs = configString.split(';');
         pairs.forEach(pair => {
             const [key, value] = pair.split(':').map(s => s.trim());
             if (key && value) {
-                // Limpiar espacios extra en el valor
                 config[key] = value.replace(/\s+/g, ' ').trim();
             }
         });
 
         return config;
-    }
-
-    getTargets(element, targetSelector) {
-        const targets = [];
-        
-        if (targetSelector.startsWith('> ')) {
-            // Selector de hijos directos
-            const selectors = targetSelector.substring(2).split(',').map(s => s.trim());
-            selectors.forEach(selector => {
-                // Verificar que el selector no esté vacío
-                if (selector && selector.length > 0) {
-                    try {
-                        const children = element.querySelectorAll(`:scope > ${selector}`);
-                        targets.push(...children);
-                    } catch (error) {
-                        console.warn(`Invalid selector: ${selector}`, error);
-                    }
-                }
-            });
-        } else {
-            // Selector normal
-            try {
-                const children = element.querySelectorAll(targetSelector);
-                targets.push(...children);
-            } catch (error) {
-                console.warn(`Invalid selector: ${targetSelector}`, error);
-            }
-        }
-
-        return targets.length > 0 ? targets : [element];
-    }    animateElement(element, config) {
+    } animateElement(element, config) {
         const delay = parseInt(config.delay) || 0;
 
         setTimeout(() => {
@@ -133,7 +85,26 @@ class ScrollSpy {
             element.dispatchEvent(new CustomEvent('scrollspy:animated', {
                 detail: { config }
             }));
-        }, 0);
+
+            // Añadir efectos de hover especiales después de la animación
+            setTimeout(() => {
+                element.style.transition = 'transform 0.3s ease, filter 0.3s ease';
+
+                element.addEventListener('mouseenter', () => {
+                    if (!element.classList.contains('no-hover')) {
+                        element.style.transform = 'translateY(-3px) scale(1.02)';
+                        element.style.filter = 'brightness(1.1) drop-shadow(0 8px 16px rgba(0,0,0,0.1))';
+                    }
+                });
+
+                element.addEventListener('mouseleave', () => {
+                    if (!element.classList.contains('no-hover')) {
+                        element.style.transform = 'translateY(0) scale(1)';
+                        element.style.filter = 'brightness(1) drop-shadow(0 2px 4px rgba(0,0,0,0.05))';
+                    }
+                });
+            }, 1500);
+        }, delay * 0.3); // Delay más suave
     }
 
     // Método para destruir observers (útil para cleanup)
